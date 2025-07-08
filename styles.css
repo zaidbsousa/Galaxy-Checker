@@ -235,6 +235,12 @@ button#checkButton:hover {
     .prize-result {
         padding: 30px 20px;
     }
+    .card-header h2 {
+        font-size: 0.95rem;
+    }
+    .card-header p {
+        font-size: 0.75rem;
+    }
 }
 
 /* RTL Adjustments */
