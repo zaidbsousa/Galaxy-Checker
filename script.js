@@ -87,6 +87,14 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
         console.error("Check button not found!");
     }
+
+    if (cardInput && checkButton) {
+        cardInput.addEventListener("keydown", function(event) {
+            if (event.key === "Enter") {
+                checkButton.click();
+            }
+        });
+    }
 });
 
 
