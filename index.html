@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اكتشف جائزتك - جلاكسي للتدريب</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="icon-container">
+                <img src="images/Whitelogo.png" alt="Galaxy Logo" style="height: 60px; width: auto;" />
+            </div>
+            <h1>اكتشف جائزتك</h1>
+            <hr class="footer-separator">
+            <p>أدخل رقم البطاقة لمعرفة جائزتك مع جلاكسي</p>
+        </div>
+
+        <!-- Input Card -->
+        <div class="input-card">
+            <div class="card-header">
+                <h2>أدخل رقم البطاقة</h2>
+                <p>أدخل الرقم المكون من 5 أو 6 أرقام (مثال: 11001)</p>
+            </div>
+            <div class="input-container">
+                <input type="text" id="cardNumber" placeholder="11001" maxlength="6" dir="ltr" pattern="[0-9]{5,6}" inputmode="numeric">
+                <button id="checkButton">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+            <div id="errorMessage" class="error-message" style="display: none;"></div>
+            <div id="loadingMessage" class="loading-message" style="display: none;">
+                <i class="fas fa-spinner fa-spin"></i>
+                جاري البحث عن جائزتك...
+            </div>
+        </div>
+
+        <!-- Prize Result -->
+        <div id="prizeResult" class="prize-result" style="display: none;">
+            <div class="prize-content">
+                <div class="prize-icon">
+                    <i id="prizeIcon" class="fas fa-gift"></i>
+                </div>
+                <h2>مبروك! لقد ربحت</h2>
+                <div class="prize-text">
+                    <p id="prizeDescription" class="prize-label"></p>
+                </div>
+                <p class="visit-branch">يرجى زيارة أقرب فرع لاستلام جائزتك</p>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <a href="https://social.galaxy.ps/" target="_blank" class="sm-icon"><i class="fas fa-link"></i></a>
+            <a href="https://www.facebook.com/GalaxyPalestine" target="_blank" class="sm-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/galaxypalestine/" target="_blank" class="sm-icon"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@galaxypalestine" target="_blank" class="sm-icon"><i class="fab fa-tiktok"></i></a>
+            <a href="https://wa.me/970594233424" target="_blank" class="sm-icon"><i class="fab fa-whatsapp"></i></a>
+            <hr class="footer-separator">
+            <div class="footer-info">
+                <a href="mailto:marketing@galaxy.ps">marketing@galaxy.ps</a>
+                <a href="tel:1700666000">000 666 1700</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+    <!-- PapaParse for CSV parsing -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
